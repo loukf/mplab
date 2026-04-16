@@ -1,2 +1,4 @@
 /lab*.X/dist/
+/lab*.X/build/
+/seira*.X/dist/
 /seira*.X/build/
