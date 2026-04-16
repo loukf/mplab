@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=a1.1.asm a1.2.asm
+SOURCEFILES_QUOTED_IF_SPACED=a1.2.asm
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/a1.1.obj ${OBJECTDIR}/a1.2.obj
-POSSIBLE_DEPFILES=${OBJECTDIR}/a1.1.obj.d ${OBJECTDIR}/a1.2.obj.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/a1.2.obj
+POSSIBLE_DEPFILES=${OBJECTDIR}/a1.2.obj.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/a1.1.obj ${OBJECTDIR}/a1.2.obj
+OBJECTFILES=${OBJECTDIR}/a1.2.obj
 
 # Source Files
-SOURCEFILES=a1.1.asm a1.2.asm
+SOURCEFILES=a1.2.asm
 
 # Pack Options 
 PACK_ASSEMBLER_OPTIONS=-I "${DFP_DIR}/avrasm/inc"  -i m328PBdef.inc
@@ -90,22 +90,12 @@ endif
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: assemble
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/a1.1.obj: a1.1.asm  nbproject/Makefile-${CND_CONF}.mk 
-	@${MKDIR} ${DISTDIR} 
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/a1.1.obj 
-	${MP_AS}  -fI -W+ie ${PACK_ASSEMBLER_OPTIONS} -d ${DISTDIR}/lab1.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  -m ${DISTDIR}/lab1.X.${IMAGE_TYPE}.map  -S ${DISTDIR}/lab1.X.${IMAGE_TYPE}.tmp a1.1.asm
 ${OBJECTDIR}/a1.2.obj: a1.2.asm  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} ${DISTDIR} 
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/a1.2.obj 
 	${MP_AS}  -fI -W+ie ${PACK_ASSEMBLER_OPTIONS} -d ${DISTDIR}/lab1.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  -m ${DISTDIR}/lab1.X.${IMAGE_TYPE}.map  -S ${DISTDIR}/lab1.X.${IMAGE_TYPE}.tmp a1.2.asm
 else
-${OBJECTDIR}/a1.1.obj: a1.1.asm  nbproject/Makefile-${CND_CONF}.mk 
-	@${MKDIR} ${DISTDIR} 
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/a1.1.obj 
-	${MP_AS}  -fI -W+ie ${PACK_ASSEMBLER_OPTIONS} -d ${DISTDIR}/lab1.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  -S ${DISTDIR}/lab1.X.${IMAGE_TYPE}.tmp  -o ${DISTDIR}/lab1.X.${IMAGE_TYPE}.hex  -m ${DISTDIR}/lab1.X.${IMAGE_TYPE}.map  -l ${DISTDIR}/lab1.X.${IMAGE_TYPE}.lss a1.1.asm
 ${OBJECTDIR}/a1.2.obj: a1.2.asm  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} ${DISTDIR} 
 	@${MKDIR} "${OBJECTDIR}" 

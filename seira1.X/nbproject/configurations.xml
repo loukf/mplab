@@ -17,10 +17,13 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>ask1.2.asm</itemPath>
-      <itemPath>ask1.1.asm</itemPath>
+      <itemPath>../lab1.X/a1.1.asm</itemPath>
+      <itemPath>../lab1.X/a1.2.asm</itemPath>
     </logicalFolder>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>../lab1.X</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="default" type="2">
@@ -1023,12 +1026,6 @@
                   value=""/>
         <property key="warningmessagebreakoptions.warningmessages" value="holdstate"/>
       </Tool>
-      <item path="ask1.2.asm" ex="true" overriding="false">
-        <AVR-ASM>
-        </AVR-ASM>
-        <AVR-Global>
-        </AVR-Global>
-      </item>
     </conf>
   </confs>
 </configurationDescriptor>

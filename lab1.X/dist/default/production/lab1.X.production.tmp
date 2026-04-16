@@ -6,7 +6,7 @@
   <DIR>/home/loukf/.mchp_packs/Microchip/ATmega_DFP/3.6.299/avrasm/inc</DIR>
   <DIR></DIR>
  </INCLUDE_PATH>
- <SOURCE_FILE>ask1.2.asm</SOURCE_FILE>
+ <SOURCE_FILE>a1.2.asm</SOURCE_FILE>
  <INCLUDED_FILES>
   <FILE>/home/loukf/.mchp_packs/Microchip/ATmega_DFP/3.6.299/avrasm/inc/m328PBdef.inc</FILE>
  </INCLUDED_FILES>
@@ -21,16 +21,16 @@
   <FILE>dist/default/production/lab1.X.production.lss</FILE>
  </OUTPUT_FILES>
  <LABELS>
-  <reset><FILE>ask1.2.asm</FILE><LINE>10</LINE></reset>
-  <LSB><FILE>ask1.2.asm</FILE><LINE>22</LINE></LSB>
-  <loop_ON><FILE>ask1.2.asm</FILE><LINE>59</LINE></loop_ON>
-  <delay><FILE>ask1.2.asm</FILE><LINE>70</LINE></delay>
-  <loop_OFF><FILE>ask1.2.asm</FILE><LINE>65</LINE></loop_OFF>
-  <move_left><FILE>ask1.2.asm</FILE><LINE>30</LINE></move_left>
-  <MSB><FILE>ask1.2.asm</FILE><LINE>39</LINE></MSB>
-  <move_right><FILE>ask1.2.asm</FILE><LINE>48</LINE></move_right>
-  <outer><FILE>ask1.2.asm</FILE><LINE>72</LINE></outer>
-  <middle><FILE>ask1.2.asm</FILE><LINE>74</LINE></middle>
-  <inner><FILE>ask1.2.asm</FILE><LINE>76</LINE></inner>
+  <reset><FILE>a1.2.asm</FILE><LINE>10</LINE></reset>
+  <LSB><FILE>a1.2.asm</FILE><LINE>22</LINE></LSB>
+  <loop_ON><FILE>a1.2.asm</FILE><LINE>59</LINE></loop_ON>
+  <delay><FILE>a1.2.asm</FILE><LINE>70</LINE></delay>
+  <loop_OFF><FILE>a1.2.asm</FILE><LINE>65</LINE></loop_OFF>
+  <move_left><FILE>a1.2.asm</FILE><LINE>30</LINE></move_left>
+  <MSB><FILE>a1.2.asm</FILE><LINE>39</LINE></MSB>
+  <move_right><FILE>a1.2.asm</FILE><LINE>48</LINE></move_right>
+  <outer><FILE>a1.2.asm</FILE><LINE>72</LINE></outer>
+  <middle><FILE>a1.2.asm</FILE><LINE>74</LINE></middle>
+  <inner><FILE>a1.2.asm</FILE><LINE>76</LINE></inner>
  </LABELS>
 </ASSEMBLER_INFO>

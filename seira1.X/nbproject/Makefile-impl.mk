@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=ask1.X
+PROJECTNAME=seira1.X
 
 # Active Configuration
 DEFAULTCONF=default
