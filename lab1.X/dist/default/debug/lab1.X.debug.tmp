@@ -1,7 +1,7 @@
 <ASSEMBLER_INFO>
  <VERSION>2.2.7</VERSION>
  <DEVICE>"ATmega328PB"</DEVICE>
- <WORKING_DIR>/home/loukf/src/ece/mplab/mikro/lab1.X</WORKING_DIR>
+ <WORKING_DIR>/home/loukf/src/ece/mplab/lab1.X</WORKING_DIR>
  <INCLUDE_PATH>
   <DIR>/home/loukf/.mchp_packs/Microchip/ATmega_DFP/3.6.299/avrasm/inc</DIR>
   <DIR></DIR>
