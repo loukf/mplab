@@ -17,8 +17,8 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>a1.1.asm</itemPath>
       <itemPath>a1.2.asm</itemPath>
+      <itemPath>a1.1.asm</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>

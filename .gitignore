@@ -1,4 +1,6 @@
 /lab*.X/dist/
 /lab*.X/build/
+/lab*.X/*.hex
 /seira*.X/dist/
 /seira*.X/build/
+/seira*.X/*.hex
