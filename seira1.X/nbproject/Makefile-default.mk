@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=../lab1.X/a1.1.asm ../lab1.X/a1.2.asm
+SOURCEFILES_QUOTED_IF_SPACED=
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1026131875/a1.1.obj ${OBJECTDIR}/_ext/1026131875/a1.2.obj
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1026131875/a1.1.obj.d ${OBJECTDIR}/_ext/1026131875/a1.2.obj.d
+OBJECTFILES_QUOTED_IF_SPACED=
+POSSIBLE_DEPFILES=
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/1026131875/a1.1.obj ${OBJECTDIR}/_ext/1026131875/a1.2.obj
+OBJECTFILES=
 
 # Source Files
-SOURCEFILES=../lab1.X/a1.1.asm ../lab1.X/a1.2.asm
+SOURCEFILES=
 
 # Pack Options 
 PACK_ASSEMBLER_OPTIONS=-I "${DFP_DIR}/avrasm/inc"  -i m16def.inc
@@ -90,27 +90,7 @@ endif
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: assemble
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/_ext/1026131875/a1.1.obj: ../lab1.X/a1.1.asm  nbproject/Makefile-${CND_CONF}.mk 
-	@${MKDIR} ${DISTDIR} 
-	@${MKDIR} "${OBJECTDIR}/_ext/1026131875" 
-	@${RM} ${OBJECTDIR}/_ext/1026131875/a1.1.obj 
-	${MP_AS}  -fI -W+ie ${PACK_ASSEMBLER_OPTIONS} -d ${DISTDIR}/seira1.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  -m ${DISTDIR}/seira1.X.${IMAGE_TYPE}.map  -S ${DISTDIR}/seira1.X.${IMAGE_TYPE}.tmp ../lab1.X/a1.1.asm
-${OBJECTDIR}/_ext/1026131875/a1.2.obj: ../lab1.X/a1.2.asm  nbproject/Makefile-${CND_CONF}.mk 
-	@${MKDIR} ${DISTDIR} 
-	@${MKDIR} "${OBJECTDIR}/_ext/1026131875" 
-	@${RM} ${OBJECTDIR}/_ext/1026131875/a1.2.obj 
-	${MP_AS}  -fI -W+ie ${PACK_ASSEMBLER_OPTIONS} -d ${DISTDIR}/seira1.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  -m ${DISTDIR}/seira1.X.${IMAGE_TYPE}.map  -S ${DISTDIR}/seira1.X.${IMAGE_TYPE}.tmp ../lab1.X/a1.2.asm
 else
-${OBJECTDIR}/_ext/1026131875/a1.1.obj: ../lab1.X/a1.1.asm  nbproject/Makefile-${CND_CONF}.mk 
-	@${MKDIR} ${DISTDIR} 
-	@${MKDIR} "${OBJECTDIR}/_ext/1026131875" 
-	@${RM} ${OBJECTDIR}/_ext/1026131875/a1.1.obj 
-	${MP_AS}  -fI -W+ie ${PACK_ASSEMBLER_OPTIONS} -d ${DISTDIR}/seira1.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  -S ${DISTDIR}/seira1.X.${IMAGE_TYPE}.tmp  -o ${DISTDIR}/seira1.X.${IMAGE_TYPE}.hex  -m ${DISTDIR}/seira1.X.${IMAGE_TYPE}.map  -l ${DISTDIR}/seira1.X.${IMAGE_TYPE}.lss ../lab1.X/a1.1.asm
-${OBJECTDIR}/_ext/1026131875/a1.2.obj: ../lab1.X/a1.2.asm  nbproject/Makefile-${CND_CONF}.mk 
-	@${MKDIR} ${DISTDIR} 
-	@${MKDIR} "${OBJECTDIR}/_ext/1026131875" 
-	@${RM} ${OBJECTDIR}/_ext/1026131875/a1.2.obj 
-	${MP_AS}  -fI -W+ie ${PACK_ASSEMBLER_OPTIONS} -d ${DISTDIR}/seira1.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  -S ${DISTDIR}/seira1.X.${IMAGE_TYPE}.tmp  -o ${DISTDIR}/seira1.X.${IMAGE_TYPE}.hex  -m ${DISTDIR}/seira1.X.${IMAGE_TYPE}.map  -l ${DISTDIR}/seira1.X.${IMAGE_TYPE}.lss ../lab1.X/a1.2.asm
 endif
 
 # ------------------------------------------------------------------------------------

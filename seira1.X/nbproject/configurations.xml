@@ -17,8 +17,6 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>../lab1.X/a1.1.asm</itemPath>
-      <itemPath>../lab1.X/a1.2.asm</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
