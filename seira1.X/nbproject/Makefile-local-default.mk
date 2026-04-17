@@ -33,4 +33,4 @@ DEP_GEN=${MP_JAVA_PATH}java -jar "/opt/microchip/mplabx/v6.30/mplab_platform/pla
 MP_AS_DIR="/opt/microchip/xc8/v2.10/avr/bin"
 # MP_LD_DIR is not defined
 # MP_AR_DIR is not defined
-DFP_DIR=/opt/microchip/mplabx/v6.30/packs/Microchip/ATmega_DFP/3.5.296
+DFP_DIR=/home/loukf/.mchp_packs/Microchip/ATmega_DFP/3.6.299

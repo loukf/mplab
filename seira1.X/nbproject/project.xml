@@ -4,13 +4,11 @@
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
             <name>seira1</name>
-            <creation-uuid>8e182995-26f3-4df0-ac09-58858ee890a6</creation-uuid>
+            <creation-uuid>52c5480c-069c-42c2-97c1-a2361c47553a</creation-uuid>
             <make-project-type>0</make-project-type>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>
-            <sourceRootList>
-                <sourceRootElem>../lab1.X</sourceRootElem>
-            </sourceRootList>
+            <sourceRootList/>
             <confList>
                 <confElem>
                     <name>default</name>
