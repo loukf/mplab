@@ -30,12 +30,12 @@ ifeq ($(TYPE_IMAGE), DEBUG_RUN)
 IMAGE_TYPE=debug
 OUTPUT_SUFFIX=obj
 DEBUGGABLE_SUFFIX=obj
-FINAL_IMAGE=${DISTDIR}/lab2-asm.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+FINAL_IMAGE=${DISTDIR}/lab2.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 else
 IMAGE_TYPE=production
 OUTPUT_SUFFIX=obj
 DEBUGGABLE_SUFFIX=obj
-FINAL_IMAGE=${DISTDIR}/lab2-asm.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+FINAL_IMAGE=${DISTDIR}/lab2.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 endif
 
 ifeq ($(COMPARE_BUILD), true)
@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=a2.2.asm
+SOURCEFILES_QUOTED_IF_SPACED=a2.1.asm
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/a2.2.obj
-POSSIBLE_DEPFILES=${OBJECTDIR}/a2.2.obj.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/a2.1.obj
+POSSIBLE_DEPFILES=${OBJECTDIR}/a2.1.obj.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/a2.2.obj
+OBJECTFILES=${OBJECTDIR}/a2.1.obj
 
 # Source Files
-SOURCEFILES=a2.2.asm
+SOURCEFILES=a2.1.asm
 
 # Pack Options 
 PACK_ASSEMBLER_OPTIONS=-I "${DFP_DIR}/avrasm/inc"  -i m328PBdef.inc
@@ -85,31 +85,31 @@ FIXDEPS=fixDeps
 ifneq ($(INFORMATION_MESSAGE), )
 	@echo $(INFORMATION_MESSAGE)
 endif
-	${MAKE}  -f nbproject/Makefile-default.mk ${DISTDIR}/lab2-asm.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+	${MAKE}  -f nbproject/Makefile-default.mk ${DISTDIR}/lab2.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: assemble
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/a2.2.obj: a2.2.asm  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/a2.1.obj: a2.1.asm  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} ${DISTDIR} 
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/a2.2.obj 
-	${MP_AS}  -fI -W+ie ${PACK_ASSEMBLER_OPTIONS} -d ${DISTDIR}/lab2-asm.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  -m ${DISTDIR}/lab2-asm.X.${IMAGE_TYPE}.map  -S ${DISTDIR}/lab2-asm.X.${IMAGE_TYPE}.tmp a2.2.asm
+	@${RM} ${OBJECTDIR}/a2.1.obj 
+	${MP_AS}  -fI -W+ie ${PACK_ASSEMBLER_OPTIONS} -d ${DISTDIR}/lab2.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  -m ${DISTDIR}/lab2.X.${IMAGE_TYPE}.map  -S ${DISTDIR}/lab2.X.${IMAGE_TYPE}.tmp a2.1.asm
 else
-${OBJECTDIR}/a2.2.obj: a2.2.asm  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/a2.1.obj: a2.1.asm  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} ${DISTDIR} 
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/a2.2.obj 
-	${MP_AS}  -fI -W+ie ${PACK_ASSEMBLER_OPTIONS} -d ${DISTDIR}/lab2-asm.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  -S ${DISTDIR}/lab2-asm.X.${IMAGE_TYPE}.tmp  -o ${DISTDIR}/lab2-asm.X.${IMAGE_TYPE}.hex  -m ${DISTDIR}/lab2-asm.X.${IMAGE_TYPE}.map  -l ${DISTDIR}/lab2-asm.X.${IMAGE_TYPE}.lss a2.2.asm
+	@${RM} ${OBJECTDIR}/a2.1.obj 
+	${MP_AS}  -fI -W+ie ${PACK_ASSEMBLER_OPTIONS} -d ${DISTDIR}/lab2.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  -S ${DISTDIR}/lab2.X.${IMAGE_TYPE}.tmp  -o ${DISTDIR}/lab2.X.${IMAGE_TYPE}.hex  -m ${DISTDIR}/lab2.X.${IMAGE_TYPE}.map  -l ${DISTDIR}/lab2.X.${IMAGE_TYPE}.lss a2.1.asm
 endif
 
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: link
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${DISTDIR}/lab2-asm.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk    
+${DISTDIR}/lab2.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk    
 	
 else
-${DISTDIR}/lab2-asm.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk   
+${DISTDIR}/lab2.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk   
 	
 endif
 
