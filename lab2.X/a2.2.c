@@ -17,6 +17,7 @@ ISR(INT0_vect) {
     PORTB = 0x04;
 }
 
+
 int main(void) {    
     EICRA = (1<<ISC01) | (1<<ISC00);
     EIMSK = (1<<INT0);
