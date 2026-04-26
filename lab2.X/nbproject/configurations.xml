@@ -64,17 +64,6 @@
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
-      <AVR-ASM>
-        <property key="hex-format" value="I"/>
-        <property key="unsupported-instructions" value="e"/>
-        <property key="wrap-relative-jumps" value="false"/>
-      </AVR-ASM>
-      <AVR-Global>
-        <property key="generate-eep-file" value="false"/>
-        <property key="generate-hex-file" value="true"/>
-        <property key="generate-lss-file" value="true"/>
-        <property key="generate-map-file" value="true"/>
-      </AVR-Global>
       <HI-TECH-COMP>
         <property key="additional-warnings" value="true"/>
         <property key="asmlist" value="true"/>
@@ -1187,16 +1176,24 @@
         <property key="wpo-lto" value="false"/>
       </XC8-config-global>
       <item path="a2.1.asm" ex="true" overriding="false">
-        <AVR-ASM>
-        </AVR-ASM>
-        <AVR-Global>
-        </AVR-Global>
+        <HI-TECH-COMP>
+        </HI-TECH-COMP>
+        <HI-TECH-LINK>
+        </HI-TECH-LINK>
+        <XC8-CO>
+        </XC8-CO>
+        <XC8-config-global>
+        </XC8-config-global>
       </item>
       <item path="a2.2.c" ex="false" overriding="false">
-        <AVR-ASM>
-        </AVR-ASM>
-        <AVR-Global>
-        </AVR-Global>
+        <HI-TECH-COMP>
+        </HI-TECH-COMP>
+        <HI-TECH-LINK>
+        </HI-TECH-LINK>
+        <XC8-CO>
+        </XC8-CO>
+        <XC8-config-global>
+        </XC8-config-global>
       </item>
       <mEdbgTool>
         <property key="AutoSelectMemRanges" value="auto"/>
