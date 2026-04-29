@@ -1,6 +1,6 @@
 .include "m328PBdef.inc"
 
-.DEF wagon = r18            ; Wagon state (bit shifting)
+.DEF cart = r18            ; Wagon state (bit shifting)
 .DEF temp = r19             ; Temporary variable
 .DEF leds = r20             ; LED control variable
 .DEF i = r21                ; inner loop counter
@@ -16,7 +16,7 @@ reset:
     ser temp
     out DDRD, temp          ; PORTD as output
 
-    ldi wagon, 0x01         ; Set wagon to LSB
+    ldi cart, 0x01         ; Set cart to LSB
     ldi leds, 6             ; Set LED counter to 6
 
 LSB:
@@ -25,14 +25,14 @@ LSB:
     rcall delay
     rcall delay
     rcall loop_OFF
-    lsl wagon
+    lsl cart
 
 move_left:
     rcall loop_ON
     rcall delay
     rcall delay
     rcall loop_OFF
-    lsl wagon
+    lsl cart
     dec leds
     brne move_left
 
@@ -42,7 +42,7 @@ MSB:
     rcall delay
     rcall delay
     rcall loop_OFF
-    lsr wagon
+    lsr cart
     ldi leds, 6
 
 move_right:
@@ -50,7 +50,7 @@ move_right:
     rcall delay
     rcall delay
     rcall loop_OFF
-    lsr wagon
+    lsr cart
     dec leds
     brne move_right         ; Loop until all LEDs have been shifted
     rjmp reset              ; Return to LSB
@@ -58,7 +58,7 @@ move_right:
 ; ********* LOOP CONTROL *********
 loop_ON:
     ser temp
-    and temp, wagon
+    and temp, cart
     out PORTD, temp         ; Output to PORTD
     ret
 
