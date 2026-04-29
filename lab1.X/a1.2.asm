@@ -1,11 +1,11 @@
 .include "m328PBdef.inc"
 
-.DEF cart = r18            ; Wagon state (bit shifting)
-.DEF temp = r19             ; Temporary variable
-.DEF leds = r20             ; LED control variable
-.DEF i = r21                ; inner loop counter
-.DEF j = r22                ; middle loop counter
-.DEF k = r23                ; outer loop counter
+.def cart = r18             ; Cart state (bit shifting)
+.def temp = r19             ; Temporary variable
+.def leds = r20             ; LED control variable
+.def i = r21                ; inner loop counter
+.def j = r22                ; middle loop counter
+.def k = r23                ; outer loop counter
 
 reset:
     ldi temp, LOW(RAMEND)
