@@ -33,4 +33,4 @@ MP_CC_DIR="/opt/microchip/xc8/v3.10/bin"
 MP_AS_DIR="/opt/microchip/xc8/v3.10/bin"
 MP_LD_DIR="/opt/microchip/xc8/v3.10/bin"
 MP_AR_DIR="/opt/microchip/xc8/v3.10/bin"
-DFP_DIR=/home/loukf/.mchp_packs/Microchip/ATmega_DFP/3.6.299
+DFP_DIR=/home/loukf/.cache/swt/.mchp_packs/Microchip/ATmega_DFP/3.6.299

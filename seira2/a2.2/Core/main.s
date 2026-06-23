@@ -10,13 +10,10 @@
 .thumb
 .text
 .global run_led_logic
-
-@ Διευθύνσεις καταχωρητών
 .equ GPIOA_ODR,     0x40020014  @ Output (LEDs)
 .equ GPIOD_IDR,     0x40020C10  @ Input (Διακόπτες)
 
 run_led_logic:
-    @ Αρχική θέση: Το αναμμένο LED ξεκινάει από το LSB (Bit 0)
     MOV R4, #1                  @ Ο R4 κρατάει το τρέχον μοτίβο των LED (0x0001)
 
 loop:
@@ -29,11 +26,11 @@ wait_for_enable:
     LDR R0, =GPIOD_IDR
     LDR R1, [R0]
 
-    @ 3. ΕΛΕΓΧΟΣ LSB (Bit 0): Αν είναι OFF (0), πάγωσε εδώ (μην πας στο delay, μην αλλάξεις bit)
+    @ 3. Έλεγχος LSB (Bit 0): Αν είναι OFF, πάγωσε εδώ (μην πας στο delay, μην αλλάξεις bit)
     TST R1, #1
     BEQ wait_for_enable         @ Αν PD0 == 0, ξαναδιάβασε τις εισόδους χωρίς να κουνηθείς
 
-    @ 4. Μικρό Delay για το Renode GUI (για να προλαβαίνεις να δεις την κίνηση)
+    @ 4. Μικρό Delay
     MOV R3, #60
 delay_loop:
     SUBS R3, #1
@@ -51,7 +48,6 @@ delay_loop:
     BNE move_right              @ Αν PD15 == 1 -> Πήγαινε Δεξιά (MSB to LSB)
 
 move_left:
-    @ Κίνηση Αριστερά: LSB -> MSB (Όταν PD15 == 0)
     LSLS R4, R4, #1             @ Ολίσθηση αριστερά κατά 1 bit
     TST R4, #0x00010000         @ Ελέγχουμε αν ξεπεράσαμε το 15ο bit (Bit 16 == 1)
     BEQ loop                    @ Αν όχι, επιστροφή στο loop
@@ -59,7 +55,6 @@ move_left:
     B loop
 
 move_right:
-    @ Κίνηση Δεξιά: MSB -> LSB (Όταν PD15 == 1)
     LSRS R4, R4, #1             @ Ολίσθηση δεξιά κατά 1 bit
     CMP R4, #0                  @ Ελέγχουμε αν μηδενίστηκε (βγήκε κάτω από το Bit 0)
     BNE loop                    @ Αν όχι, επιστροφή στο loop
